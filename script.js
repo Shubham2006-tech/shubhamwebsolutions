@@ -141,7 +141,7 @@ if (topBtn) {
 }
 
 // ============================
-//  EmailJS Contact Form (Updated)
+//  EmailJS Contact Form (Final Version)
 // ============================
 const form = document.getElementById("contact-form");
 const formMsg = document.getElementById("form-message");
@@ -149,11 +149,13 @@ const formMsg = document.getElementById("form-message");
 if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+
     const data = new FormData(form);
     const name = data.get("name");
     const email = data.get("email");
-    const project_title = data.get("subject"); // ✅ Project Title
+    const project_title = data.get("subject"); // ✅ Match EmailJS variable
     const message = data.get("message");
+    const time = new Date().toLocaleString(); // ✅ Include {{time}}
 
     formMsg.classList.remove("hidden");
     formMsg.innerHTML = `
@@ -165,9 +167,9 @@ if (form) {
       .send("service_b3cu6za", "template_v1oykjq", {
         name,
         email,
-        project_title,
+        project_title, // ✅ This field matches your template variable
         message,
-        time: new Date().toLocaleString(),
+        time, // ✅ Automatically fills {{time}} in your template
       })
       .then(() => {
         formMsg.innerHTML = `
