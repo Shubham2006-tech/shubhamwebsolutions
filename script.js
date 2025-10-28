@@ -162,7 +162,7 @@ if (form) {
       </div>`;
 
     emailjs
-      .send("service_t4sbdfi", "template_53kk2li", {
+      .send("service_b3cu6za", "template_v1oykjq", {
         name,
         email,
         subject,
