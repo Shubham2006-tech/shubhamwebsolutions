@@ -141,7 +141,7 @@ if (topBtn) {
 }
 
 // ============================
-//  EmailJS Contact Form
+//  EmailJS Contact Form (Updated)
 // ============================
 const form = document.getElementById("contact-form");
 const formMsg = document.getElementById("form-message");
@@ -152,7 +152,7 @@ if (form) {
     const data = new FormData(form);
     const name = data.get("name");
     const email = data.get("email");
-    const subject = data.get("subject");
+    const project_title = data.get("subject"); // ✅ Project Title
     const message = data.get("message");
 
     formMsg.classList.remove("hidden");
@@ -165,8 +165,9 @@ if (form) {
       .send("service_b3cu6za", "template_v1oykjq", {
         name,
         email,
-        subject,
+        project_title,
         message,
+        time: new Date().toLocaleString(),
       })
       .then(() => {
         formMsg.innerHTML = `
