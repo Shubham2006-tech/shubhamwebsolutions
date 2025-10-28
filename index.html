@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shubham Pawar Web Solutions — Web, App & Design Studio</title>
+
+  <!-- SEO / OpenGraph -->
+  <meta name="description" content="Shubham Pawar Web Solutions — Websites, Mobile Apps, Poster & Banner Design, Branding and Data Solutions. Professional, fast, and secure."/>
+  <meta property="og:title" content="Shubham Pawar Web Solutions" />
+  <meta property="og:description" content="We build modern websites, cross-platform apps, and visual assets that elevate brands." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="og-image.png" />
+  <meta name="theme-color" content="#064e3b" />
+
+  <!-- Tailwind CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- AOS (optional simple animation lib) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon: replace with your icon if available -->
+  <link rel="icon" href="ICON.png" />
+</head>
+<body class="bg-gray-900 text-white antialiased">
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900">
+    <div class="text-center">
+      <div class="loader mb-4" aria-hidden="true"></div>
+      <p class="text-gray-300">Shubham Pawar Web Solutions — Preparing your experience…</p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-40">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-full logo-gradient flex items-center justify-center text-gray-900 font-bold">SP</div>
+        <div>
+          <h1 class="text-lg font-bold text-green-300">Shubham Pawar</h1>
+          <p class="text-xs text-gray-300 -mt-1">Web Solutions</p>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center space-x-6">
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#why">Why Us</a>
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+        <a class="nav-link" href="#testimonials">Testimonials</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md focus:outline-none">☰</button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800/90">
+      <div class="flex flex-col items-center py-4 space-y-3">
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#why">Why Us</a>
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+        <a class="nav-link" href="#testimonials">Testimonials</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="min-h-screen relative flex items-center">
+    <!-- Animated gradient / floating shapes -->
+    <div class="absolute inset-0 hero-bg"></div>
+
+    <div class="max-w-6xl mx-auto px-6 py-32 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">We design & build digital products that grow businesses.</h1>
+        <p class="mt-4 text-gray-300 max-w-xl">I’m <strong>Shubham Pawar</strong>, founder of <span class="text-green-300">Shubham Pawar Web Solutions</span>. We create high-converting websites, mobile apps, and visual brand assets — fast and reliable.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#contact" class="btn-primary">Start Your Project</a>
+          <a href="#services" class="btn-outline">Explore Services</a>
+          <a href="#portfolio" class="btn-ghost">View Work</a>
+        </div>
+
+        <div class="mt-6 flex items-center space-x-4 text-gray-300">
+          <a href="tel:+919518909346" class="font-medium text-green-300">+91 95189 09346</a>
+          <span class="hidden md:inline">•</span>
+          <a href="mailto:pawarshubhamsunil17@gmail.com" class="font-medium text-green-300">pawarshubhamsunil17@gmail.com</a>
+        </div>
+      </div>
+
+      <div data-aos="fade-left" class="relative">
+        <div class="p-1 rounded-2xl bg-gradient-to-br from-green-400 to-teal-400">
+          <div class="bg-gray-900 p-6 rounded-xl">
+            <h3 class="text-lg font-semibold text-green-300">What we do</h3>
+            <ul class="mt-4 text-gray-300 space-y-2">
+              <li>• Web & Full-Stack Development (React, Node.js, PHP)</li>
+              <li>• Mobile Apps (Cordova / Android)</li>
+              <li>• Poster, Banner & Logo Design</li>
+              <li>• Data Analytics & Dashboards</li>
+            </ul>
+            <div class="mt-6 flex items-center space-x-3">
+              <span class="text-sm text-gray-400">Roles:</span>
+              <span id="typing-text" class="text-green-300 font-medium"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example hero image (placeholder) -->
+        <div class="mt-6">
+          <img src="Desktop Website Mock-Up V2.jpeg" alt="Work mockup" class="w-full rounded-xl shadow-xl object-cover max-h-60 mx-auto" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section id="services" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title">Services</h2>
+      <p class="text-gray-300 max-w-2xl">End-to-end services for startups and small businesses — design, development, deployment and growth.</p>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl" data-aos="fade-up">
+          <h3 class="text-xl font-semibold text-green-300">Web Development</h3>
+          <p class="text-gray-300 mt-2">Custom websites, SPAs, eCommerce, and dashboards with fast performance and SEO best-practices.</p>
+        </div>
+
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl" data-aos="fade-up" data-aos-delay="80">
+          <h3 class="text-xl font-semibold text-green-300">Mobile Apps</h3>
+          <p class="text-gray-300 mt-2">Cross-platform apps (Cordova) or native Android — optimized, signed, and ready for stores.</p>
+        </div>
+
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl" data-aos="fade-up" data-aos-delay="160">
+          <h3 class="text-xl font-semibold text-green-300">Poster & Banner Design</h3>
+          <p class="text-gray-300 mt-2">Print & digital banners, posters, and promotional graphics tailored for campaigns & socials.</p>
+        </div>
+
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl" data-aos="fade-up" data-aos-delay="240">
+          <h3 class="text-xl font-semibold text-green-300">Logo & Branding</h3>
+          <p class="text-gray-300 mt-2">Logo design, brand kits, and identity guidelines to make your business memorable.</p>
+        </div>
+
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl" data-aos="fade-up" data-aos-delay="320">
+          <h3 class="text-xl font-semibold text-green-300">UI/UX Design</h3>
+          <p class="text-gray-300 mt-2">Intuitive interfaces that convert — wireframes, high-fi prototypes and design handoffs.</p>
+        </div>
+
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl" data-aos="fade-up" data-aos-delay="400">
+          <h3 class="text-xl font-semibold text-green-300">Data & Analytics</h3>
+          <p class="text-gray-300 mt-2">Reports & dashboards to understand customers, increase conversions and reduce churn.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why" class="py-20 bg-gray-900/30">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="section-title">Why Choose Us</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto">Business-first development with a focus on speed, visuals and measurable results.</p>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl" data-aos="zoom-in">
+          <h4 class="text-green-300 font-semibold">Quality Design</h4>
+          <p class="text-gray-300 mt-2">Beautiful UI plus conversion-focused UX — designed to convert visitors into customers.</p>
+        </div>
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl" data-aos="zoom-in" data-aos-delay="80">
+          <h4 class="text-green-300 font-semibold">Fast Delivery</h4>
+          <p class="text-gray-300 mt-2">Lean development, clear milestones, and a predictable delivery timeline.</p>
+        </div>
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl" data-aos="zoom-in" data-aos-delay="160">
+          <h4 class="text-green-300 font-semibold">Aftercare & Support</h4>
+          <p class="text-gray-300 mt-2">Maintenance, updates, and help with publishing to app stores or servers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title">Portfolio</h2>
+      <p class="text-gray-300 max-w-2xl">Featured projects & creative assets. Click any card to view more details.</p>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <!-- Projects: each card has data attributes used by JS to populate modal -->
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl cursor-pointer project-card" data-title="QR Code Generator" data-desc="Cordova mobile app generating and downloading QR codes (WiFi, URL, vCard). Includes gallery & offline support." data-tags="Cordova,Mobile,Utility" data-img="project-qr.jpg">
+          <h3 class="text-lg font-semibold text-green-300">QR Code Generator</h3>
+          <p class="text-gray-300 mt-2">Advanced QR code generator app with gallery & download support.</p>
+          <div class="mt-3 text-sm text-gray-400">#Cordova #Mobile</div>
+        </div>
+
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl cursor-pointer project-card" data-title="E-Commerce Website" data-desc="React.js store with product filters, cart system and secure checkout integration." data-tags="React,Web,Ecommerce" data-img="project-ecom.jpg">
+          <h3 class="text-lg font-semibold text-green-300">E-Commerce Website</h3>
+          <p class="text-gray-300 mt-2">Responsive online store built with modern frontend & backend.</p>
+          <div class="mt-3 text-sm text-gray-400">#React #Ecommerce</div>
+        </div>
+
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl cursor-pointer project-card" data-title="Real-Time Chat App" data-desc="Realtime messaging with Socket.IO, Node.js backend and JWT-based auth." data-tags="Node,Socket.IO,Realtime" data-img="project-chat.jpg">
+          <h3 class="text-lg font-semibold text-green-300">Real-Time Chat App</h3>
+          <p class="text-gray-300 mt-2">Secure realtime messaging and group chats.</p>
+          <div class="mt-3 text-sm text-gray-400">#Socket.IO #Realtime</div>
+        </div>
+
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl cursor-pointer project-card" data-title="Brand Posters & Banners" data-desc="High-quality promotional banners and event posters for print and digital use." data-tags="Design,Poster,Banner" data-img="project-poster.jpg">
+          <h3 class="text-lg font-semibold text-green-300">Brand Posters & Banners</h3>
+          <p class="text-gray-300 mt-2">Marketing visuals for campaigns and socials.</p>
+          <div class="mt-3 text-sm text-gray-400">#Design #Print</div>
+        </div>
+
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl cursor-pointer project-card" data-title="Notes App" data-desc="Cordova notes app with offline storage, edit/delete features and sync-ready architecture." data-tags="Cordova,App,Notes" data-img="project-notes.jpg">
+          <h3 class="text-lg font-semibold text-green-300">Notes App</h3>
+          <p class="text-gray-300 mt-2">Lightweight notes app for students and professionals.</p>
+          <div class="mt-3 text-sm text-gray-400">#Cordova #Notes</div>
+        </div>
+
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl cursor-pointer project-card" data-title="Amazon Clone UI" data-desc="Static responsive Amazon-like UI focusing on layout and product presentation." data-tags="HTML,CSS,UX" data-img="project-amazon.jpg">
+          <h3 class="text-lg font-semibold text-green-300">Amazon Clone UI</h3>
+          <p class="text-gray-300 mt-2">UI-focused project showing grid/layout expertise.</p>
+          <div class="mt-3 text-sm text-gray-400">#HTML #CSS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 bg-gray-900/20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="section-title">Testimonials</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto">What clients say about working with us.</p>
+
+      <div id="testimonials-slider" class="mt-8 relative max-w-3xl mx-auto">
+        <div class="testi-slide p-6 bg-gray-800 rounded-xl">
+          <p class="text-gray-300">“Fast delivery and a beautiful site — increased our leads within a week.”</p>
+          <div class="mt-4 text-sm text-green-300 font-semibold">— Aniket R., Founder</div>
+        </div>
+
+        <div class="testi-slide hidden p-6 bg-gray-800 rounded-xl">
+          <p class="text-gray-300">“Design quality and responsiveness were top-notch. Highly recommended.”</p>
+          <div class="mt-4 text-sm text-green-300 font-semibold">— Priya S., Marketing Lead</div>
+        </div>
+
+        <div class="testi-slide hidden p-6 bg-gray-800 rounded-xl">
+          <p class="text-gray-300">“Great communication and after-support. Helped publish app to Play Store.”</p>
+          <div class="mt-4 text-sm text-green-300 font-semibold">— Raj M., Product Owner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="section-title text-center">Start Your Project</h2>
+      <p class="text-gray-300 text-center max-w-2xl mx-auto">Tell us about your idea — we'll respond within 48 hours with a clear next step.</p>
+
+      <form id="contact-form" class="mt-8 space-y-4 bg-gray-800 p-6 rounded-xl border border-gray-700">
+        <div class="grid md:grid-cols-2 gap-4">
+          <input required name="name" type="text" placeholder="Your name" class="input-field"/>
+          <input required name="email" type="email" placeholder="Your email" class="input-field"/>
+        </div>
+
+        <input required name="subject" type="text" placeholder="Project title (e.g. 'E-commerce site')" class="input-field"/>
+        <textarea required name="message" rows="5" placeholder="Project details, timeline, budget (optional)" class="input-field"></textarea>
+
+        <div class="flex items-center justify-between">
+          <button type="submit" class="btn-primary">Send Message</button>
+          <div class="text-sm text-gray-400">Or email: <a href="mailto:pawarshubhamsunil17@gmail.com" class="text-green-300">pawarshubhamsunil17@gmail.com</a></div>
+        </div>
+
+        <div id="form-message" class="hidden mt-4"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp CTA -->
+  <a id="whatsapp-btn" href="https://wa.me/919518909346" target="_blank" class="fixed right-6 bottom-6 z-40 p-3 rounded-full shadow-lg bg-gradient-to-br from-green-400 to-teal-400 text-gray-900 font-bold" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- Scroll to top -->
+  <button id="scroll-top" title="Top" class="hidden fixed right-6 bottom-20 z-30 p-3 rounded-full shadow-lg">↑</button>
+
+  <!-- Footer -->
+  <footer class="mt-12 py-8 bg-gray-800 border-t border-gray-700">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+      <div class="text-gray-300">
+        <div class="font-semibold text-green-300">Shubham Pawar Web Solutions</div>
+        <div class="text-sm mt-1">Email: <a class="text-green-300" href="mailto:pawarshubhamsunil17@gmail.com">pawarshubhamsunil17@gmail.com</a> • Phone: <a class="text-green-300" href="tel:+919518909346">+91 95189 09346</a></div>
+      </div>
+
+      <div class="mt-4 md:mt-0 flex items-center space-x-4 text-gray-400">
+        <a href="#" class="hover:text-green-300">GitHub</a>
+        <a href="#" class="hover:text-green-300">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
