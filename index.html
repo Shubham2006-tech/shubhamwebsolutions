@@ -16,13 +16,13 @@
   <!-- Tailwind CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <!-- AOS (optional simple animation lib) -->
+  <!-- AOS (animation library) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Favicon: replace with your icon if available -->
+  <!-- Favicon -->
   <link rel="icon" href="ICON.png" />
 </head>
 <body class="bg-gray-900 text-white antialiased">
@@ -71,7 +71,6 @@
 
   <!-- HERO -->
   <header id="home" class="min-h-screen relative flex items-center">
-    <!-- Animated gradient / floating shapes -->
     <div class="absolute inset-0 hero-bg"></div>
 
     <div class="max-w-6xl mx-auto px-6 py-32 relative z-10 grid md:grid-cols-2 gap-12 items-center">
@@ -108,8 +107,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Example hero image (placeholder) -->
         <div class="mt-6">
           <img src="Desktop Website Mock-Up V2.jpeg" alt="Work mockup" class="w-full rounded-xl shadow-xl object-cover max-h-60 mx-auto" loading="lazy" />
         </div>
@@ -124,6 +121,7 @@
       <p class="text-gray-300 max-w-2xl">End-to-end services for startups and small businesses — design, development, deployment and growth.</p>
 
       <div class="grid md:grid-cols-3 gap-6 mt-8">
+
         <div class="card-shadow p-6 bg-gray-800 rounded-xl" data-aos="fade-up">
           <h3 class="text-xl font-semibold text-green-300">Web Development</h3>
           <p class="text-gray-300 mt-2">Custom websites, SPAs, eCommerce, and dashboards with fast performance and SEO best-practices.</p>
@@ -153,6 +151,17 @@
           <h3 class="text-xl font-semibold text-green-300">Data & Analytics</h3>
           <p class="text-gray-300 mt-2">Reports & dashboards to understand customers, increase conversions and reduce churn.</p>
         </div>
+
+        <!-- NEW SERVICE: Visiting Cards -->
+        <div class="card-shadow p-6 bg-gray-800 rounded-xl" data-aos="fade-up" data-aos-delay="480">
+          <h3 class="text-xl font-semibold text-green-300">Visiting Cards</h3>
+          <p class="text-gray-300 mt-2">
+            Modern and elegant visiting card designs for individuals and businesses.
+            Print-ready and fully customizable layouts created with precision and creativity.
+          </p>
+          <p class="text-gray-400 text-sm mt-2">Designed by Shubham Graphics • +91 95189 09346</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -187,7 +196,7 @@
       <p class="text-gray-300 max-w-2xl">Featured projects & creative assets. Click any card to view more details.</p>
 
       <div class="grid md:grid-cols-3 gap-6 mt-8">
-        <!-- Projects: each card has data attributes used by JS to populate modal -->
+        <!-- Portfolio projects (same as before) -->
         <div class="card-shadow p-6 bg-gray-800 rounded-xl cursor-pointer project-card" data-title="QR Code Generator" data-desc="Cordova mobile app generating and downloading QR codes (WiFi, URL, vCard). Includes gallery & offline support." data-tags="Cordova,Mobile,Utility" data-img="project-qr.jpg">
           <h3 class="text-lg font-semibold text-green-300">QR Code Generator</h3>
           <p class="text-gray-300 mt-2">Advanced QR code generator app with gallery & download support.</p>
@@ -226,8 +235,6 @@
       </div>
     </div>
   </section>
-
-  
 
   <!-- Testimonials -->
   <section id="testimonials" class="py-20 bg-gray-900/20">
@@ -310,4 +317,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
